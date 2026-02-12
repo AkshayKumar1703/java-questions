@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.algorithms.RecursionExamples;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
