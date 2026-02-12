@@ -1,4 +1,6 @@
 package org.example;
+import org.example.datastructure.LinkedListExamples;
+import org.example.datastructure.Node;
 import org.junit.jupiter.api.Test;
 import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;

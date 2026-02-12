@@ -1,4 +1,4 @@
-package org.example;
+package org.example.datastructure;
 
 public class Node {
     Integer value;
