@@ -11,7 +11,7 @@ class RecursionExamplesTest {
     RecursionExamples recursionexamples = new RecursionExamples();
 
     @Test
-    void shouldChecksumoffibonacci() {
+    void shouldGiveSumOfFibonacci() {
         int n = 5;
         int result = recursionexamples.fibonacci(n);
         assertEquals(6, result);
