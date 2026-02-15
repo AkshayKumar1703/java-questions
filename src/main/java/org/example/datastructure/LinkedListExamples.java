@@ -4,7 +4,7 @@ import java.util.List;
 
 public class LinkedListExamples {
 
-    public   Node createLinkedList(List<Integer> numbers) {
+    public Node createLinkedList(List<Integer> numbers) {
         if (numbers.isEmpty()) {
             return null;
         }
