@@ -44,5 +44,34 @@ public class BinaryTreeExamples {
         return 1 + Math.max(leftHeight, rightHeight);
     }
 
+    public Integer sumOfAllNodes(TreeNode root) {
+        if (root == null) return 0;
+
+        int leftSum = sumOfAllNodes(root.left);
+        int rightSum = sumOfAllNodes(root.right);
+
+        int finalSum = root.value + leftSum + rightSum;
+        return finalSum;
+    }
+
+    public boolean isLeaf(TreeNode root) {
+        if (root == null) return false;
+
+        if (root.right == null && root.left == null)
+            return true;
+        return false;
+    }
+
+    public int leafSum(TreeNode root) {
+        if (root == null) return 0;
+
+        if (isLeaf(root))
+                return root.value;
+
+        int leftLeaf = leafSum(root.left);
+        int rightLeaf = leafSum(root.right);
+
+        return leftLeaf + rightLeaf;
+    }
 }
 

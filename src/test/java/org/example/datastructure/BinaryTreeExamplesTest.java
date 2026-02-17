@@ -14,12 +14,14 @@ class BinaryTreeExamplesTest {
      TreeNode buildTree() {
         TreeNode root = new TreeNode(3);
 
-        TreeNode left = new TreeNode(2);
+        TreeNode left = new TreeNode(11);
 
-        TreeNode right = new TreeNode(1);
+        TreeNode right = new TreeNode(12);
+        TreeNode leftleft = new TreeNode(13);
 
         root.left = left;
         root.right = right;
+        root.left.left = leftleft;
 
         return root;
     }
@@ -50,4 +52,16 @@ class BinaryTreeExamplesTest {
          assertEquals(2, result);
     }
 
+    @Test
+    void getSumofNodes() {
+         TreeNode root = buildTree();
+         int sum = binaryTreeExamples.sumOfAllNodes(root);
+         assertEquals(6,sum);
+    }
+    @Test
+    void getSumOfLeaf() {
+        TreeNode root = buildTree();
+        int sum = binaryTreeExamples.leafSum(root);
+        assertEquals(25,sum);
+    }
 }

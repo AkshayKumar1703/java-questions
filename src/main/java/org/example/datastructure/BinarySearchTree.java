@@ -1,5 +1,7 @@
 package org.example.datastructure;
 
+import org.example.datastructure.TreeNode;
+
 public class BinarySearchTree {
 
     public TreeNode root;
