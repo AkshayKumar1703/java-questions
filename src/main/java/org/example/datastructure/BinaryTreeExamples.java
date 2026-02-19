@@ -2,6 +2,8 @@ package org.example.datastructure;
 
 import com.sun.source.tree.Tree;
 
+import java.util.Queue;
+
 public class BinaryTreeExamples {
 
     int sum = 0;
@@ -65,13 +67,25 @@ public class BinaryTreeExamples {
     public int leafSum(TreeNode root) {
         if (root == null) return 0;
 
-        if (isLeaf(root))
-                return root.value;
+        if (isLeaf(root)) return root.value;
 
         int leftLeaf = leafSum(root.left);
         int rightLeaf = leafSum(root.right);
 
         return leftLeaf + rightLeaf;
+    }
+
+    public void printLevel(TreeNode root) {
+        for (int i = 0; i <= height(root); i++) printLevel(root, i);
+    }
+    public void printLevel(TreeNode root, int level) {
+        if (root == null) return;
+
+        if (level == 0) System.out.print(root.value + "-");
+        else {
+            printLevel(root.left, level - 1);
+            printLevel(root.right, level - 1);
+        }
     }
 }
 

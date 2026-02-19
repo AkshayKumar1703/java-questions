@@ -59,9 +59,20 @@ class BinaryTreeExamplesTest {
          assertEquals(6,sum);
     }
     @Test
-    void getSumOfLeaf() {
+    void testSumOfLeaf() {
         TreeNode root = buildTree();
         int sum = binaryTreeExamples.leafSum(root);
         assertEquals(25,sum);
+    }
+    @Test
+    void testSumOfLeafWithEmptyTree() {
+        TreeNode root =  null;
+        int sum = binaryTreeExamples.leafSum(root);
+        assertEquals(0, sum);
+    }
+    @Test
+    void testPrintLevel() {
+         TreeNode root = buildTree();
+         binaryTreeExamples.printLevel(root);
     }
 }
