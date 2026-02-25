@@ -1,22 +1,23 @@
-#Graph
+# Graph
 
-Basically it is a group of edges and vertices
-Graph representation
-G(V, E); where V(G) represents a set of vertices and E(G) represents a set of edges
-The graph can be directed or undirected
-The graph can be connected or disjoint
-Graph Advantages
-finding connectivity
-Shortest path
-min cost to reach from 1 pt to other
-Min spanning tree
-Graph Disadvantages
-Storing graph(Adjacency list and Adjacency matrix) can lead to complexities
-Graph Applications
-Suitable for a circuit network
-Suitable for applications like Facebook, LinkedIn, etc
-Medical science
-Demonstration of Graph
+* Basically it is a group of edges and vertices 
+### Graph representation
+* G(V, E); where V(G) represents a set of vertices and E(G) represents a set of edges
+* The graph can be directed or undirected
+* The graph can be connected or disjoint
+* Graph Advantages
+* finding connectivity
+* Shortest path
+* min cost to reach from 1 pt to other
+* Min spanning tree
+### Graph Disadvantages
+* Storing graph(Adjacency list and Adjacency matrix) can lead to complexities
+* Graph Applications
+* Suitable for a circuit network
+* Suitable for applications like Facebook, LinkedIn, etc
+* Medical science
+* Demonstration of Graph
+
 import java.util.*;
 
 class Graph
