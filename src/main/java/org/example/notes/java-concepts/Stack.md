@@ -1,36 +1,38 @@
-#Stack
+# Stack
 
-##What is a stack?
-A stack is a representation of nodes. There are two components to each node: data and next (storing address of next node). Each node's data portion contains the assigned value, and its next pointer directs the user to the node that has the stack's subsequent item. The highest node in the stack is referred to as the top. 
+### What is a stack?
+* A stack is a representation of nodes. There are two components to each node: data and next (storing address of next node). Each node's data portion contains the assigned value, and its next pointer directs the user to the node that has the stack's subsequent item. The highest node in the stack is referred to as the top. 
 
 
-##Features of Stack
-Linear Data Structures using Java
+### Features of Stack
+* Linear Data Structures using Java
 Follows LIFO: Last In First Out
-Only the top elements are available to be accessed
-Insertion and deletion takes place from the top
+* Only the top elements are available to be accessed
+* Insertion and deletion takes place from the top
 Eg: a stack of plates, chairs, etc
 
-4 major operations:
-push(ele) - used to insert element at top
-pop() - removes the top element from stack
-isEmpty() - returns true is stack is empty
-peek() - to get the top element of the stack
-All operation works in constant time i.e, O(1)
-Stack Advantages
-Maintains data in a LIFO manner
-The last element is readily available for use
-All operations are of O(1) complexity
-Stack Disadvantages
-Manipulation is restricted to the top of the stack
-Not much flexible
-Stack Applications
-Recursion
-Parsing
-Browser
-Editors
-Java Program using Stack
-import java.util.*;
+### 4 major operations:
+* push(ele) - used to insert element at top
+* pop() - removes the top element from stack
+* isEmpty() - returns true is stack is empty
+* peek() - to get the top element of the stack
+* All operation works in constant time i.e, O(1)
+### Stack Advantages
+* Maintains data in a LIFO manner
+* The last element is readily available for use
+* All operations are of O(1) complexity
+### Stack Disadvantages
+* Manipulation is restricted to the top of the stack
+* Not much flexible
+### Stack Applications
+* Recursion
+* Parsing
+* Browser
+* Editors
+
+Eg - Java Program using Stack
+
+''' import java.util.*;
 
 class Stack
 {
@@ -126,6 +128,7 @@ public class Demo
 
 	}
 }
+ '''
 
 Output:
 
