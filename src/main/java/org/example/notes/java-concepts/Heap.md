@@ -1,28 +1,28 @@
-notes.md
-
-#Heap
-
+# Heap
 Binary Heap can be visualized array as a complete binary tree
-Arr[0] element will be treated as root
-length(A) - size of array
-heapSize(A) - size of heap
-Generally used when we are dealing with minimum and maximum elements
-For ith node
-(i-1)/2	Parent
-(2*i)+1	Left child
-(2*i)+2	Right Child
-Heap Advantages
-Can be of 2 types: min heap and max heap
-Min heap keeps the smallest element and top and max keep the largest 
-O(1) for dealing with min or max elements
-Heap Disadvantages
-Random access is not possible
-Only min or max element is available for accessibility
-Heap Applications
-Suitable for applications dealing with priority
-Scheduling algorithm
-caching
-Program of Max Heap
+
+* Arr[0] element will be treated as root
+* length(A) - size of array
+* heapSize(A) - size of heap
+### Generally used when we are dealing with minimum and maximum elements
+* For ith node
+* (i-1)/2	Parent
+* (2*i)+1	Left child
+* (2*i)+2	Right Child
+### Heap Advantages
+* Can be of 2 types: min heap and max heap
+* Min heap keeps the smallest element and top and max keep the largest 
+* O(1) for dealing with min or max elements
+### Heap Disadvantages
+* Random access is not possible
+* Only min or max element is available for accessibility
+### Heap Applications
+* Suitable for applications dealing with priority
+* Scheduling algorithm
+* caching
+* Program of Max Heap
+
+```
 import java.util.*;
 
 
@@ -119,7 +119,7 @@ public class HeapDemo{
 	}
 
 }
-
+```
 Output
 7
 enter the elements of array
