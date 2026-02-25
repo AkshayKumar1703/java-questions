@@ -16,7 +16,50 @@ public class questions {
         return idx + 1;
     }
 
-// Given a string s consisting of words and spaces, return the length of the last word in the string.
+//    27. Remove Element
+public int removeElement(int[] nums, int val) {
+    if(nums.length == 0) {
+        return 0;
+    }
+    int idx = 0;
+    for ( int i = 0; i < nums.length; i++) {
+        if (nums[i] != val) {
+            nums[idx] = nums[i];
+            idx++;
+        }
+    }
+    return idx;
+}
+
+// 189. Rotate Array
+//Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.
+    public void rotate(int[] nums, int k) {
+    int n = nums.length;
+    for (int i = 0; i < k; i++) {
+        int last = nums[n-1];
+        for (int j = n-1; j>0; j--) {
+            nums[j] = nums[j-1];
+        }
+        nums[0] = last;
+    }
+}
+// Understandable code
+public void rotate1(int[] nums, int k) {
+    for(int i = 0; i < k; i++) {
+        rotateBy1(nums);
+    }
+}
+
+    private void rotateBy1(int[] nums) {
+        int length = nums.length;
+        int last = nums[length-1];
+        for (int j = length-1; j > 0; j--) {
+            nums[j] = nums[j-1];
+        }
+        nums[0] = last;
+    }
+
+    // Given a string s consisting of words and spaces, return the length of the last word in the string.
     public static int lengthOfLastWord(String s) {
             String[] word = s.split(" ");
             String lastWord = word[word.length - 1];
