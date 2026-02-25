@@ -1,32 +1,33 @@
-#Queue
+# Queue
 
-##What is Queue?
+### What is Queue?
 
-The queue is called an abstract data structure. Data is always added to one end (enqueued), and removed from the other (dequeue). Queue uses the First-In-First-Out approach and data item that was stored initially will be accessed first in a queue.
+* The queue is called an abstract data structure. Data is always added to one end (enqueued), and removed from the other (dequeue). Queue uses the First-In-First-Out approach and data item that was stored initially will be accessed first in a queue.
 
-Features of Queue
-Linear Data Structure
+### Features of Queue
+* Linear Data Structure
 Follows FIFO: First In First Out
 Insertion can take place from the rear end.
 Deletion can take place from the front end.
 Eg: queue at ticket counters, bus station
-4 major operations:
-enqueue(ele) - used to insert element at top
-dequeue() - removes the top element from queue 
-peekfirst() - to get the first element of the queue 
-peeklast() - to get the last element of the queue 
-All operation works in constant time i.e, O(1)
-Queue Advantages
-Maintains data in FIFO manner
-Insertion from beginning and deletion from end takes O(1) time
-Queue Applications
-Scheduling
-Maintaining playlist
-Interrupt handling
-Variations in Queue: Two popular variations of queues are Circular queues and Dequeues.
+### 4 major operations:
+* enqueue(ele) - used to insert element at top
+* dequeue() - removes the top element from queue 
+* peekfirst() - to get the first element of the queue 
+* peeklast() - to get the last element of the queue 
+* All operation works in constant time i.e, O(1)
+### Queue Advantages
+* Maintains data in FIFO manner
+* Insertion from beginning and deletion from end takes O(1) time
+### Queue Applications
+* Scheduling
+* Maintaining playlist
+* Interrupt handling
+
+### Variations in Queue: Two popular variations of queues are Circular queues and Dequeues.
 
 Java program of Queue- using Array
-
+```
 import java.util.*;
 
 class Queue{
@@ -90,7 +91,7 @@ public class QueueDemo{
 	  ob.display();
 	 }
 }
-	  
+```	  
 
 
 
@@ -100,7 +101,8 @@ Output:
 
 1 2 3 4 5 
 2 3 4 5 
-Demonstration of Queue- using LinkedList
+* Demonstration of Queue- using LinkedList
+```
 class LNode{
 	
 	int data;
@@ -183,9 +185,7 @@ class Queue{
 			ob.display(head);
 		}
 	}
-
-
-
+```
 
 Output
 
