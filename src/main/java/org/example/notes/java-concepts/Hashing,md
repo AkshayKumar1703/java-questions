@@ -1,20 +1,22 @@
-#Hashing
-
-Uses special Hash function
+# Hashing
+### Uses special Hash function
 A hash function maps an element to an address for storage
 This provides constant-time access
-Collision resolution techniques handle collision
-Collision resolution technique
-Chaining
-Open Addressing
-Hashing Advantages
-The hash function helps in fetching elements in constant time
-An efficient way to store elements
-Hashing Disadvantages
-Collision resolution increases complexity
-Hashing Applications
-Suitable for the application needs constant time fetching
+* Collision resolution techniques handle collision
+* Collision resolution technique
+* Chaining
+* Open Addressing
+### Hashing Advantages
+* The hash function helps in fetching elements in constant time
+* An efficient way to store elements
+### Hashing Disadvantages
+* Collision resolution increases complexity
+### Hashing Applications
+* Suitable for the application needs constant time fetching
+
 Demonstration of HashSet - to find string has unique characters
+
+```
 import java.util.*;
 
 class HashSetDemo1{
@@ -45,12 +47,11 @@ class HashSetDemo1{
 			System.out.println("string has unique characters");
 		else
 			System.out.println("string does not have unique characters");
-
-		
 		
 	}
 }
 
+```
 Output:
 string has unique characters
 Demonstration of HashMap - count the characters in a string
