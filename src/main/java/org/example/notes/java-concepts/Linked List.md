@@ -1,21 +1,22 @@
-#Linked List
+# Linked List
 
-##What is Linked List?
-Linked list data structure helps the required objects to be arranged in a linear order.
+### What is Linked List?
+* Linked list data structure helps the required objects to be arranged in a linear order.
 
-Linked List Advantages
-Dynamic in size
-No wastage as capacity and size is always equal
-Easy insertion and deletion as 1 link manipulation is required
-Efficient memory allocation
-Linked List Disadvantages
-If head Node is lost, the linked list is lost
-No random access is possible
-Linked List Applications
-Suitable where memory is limited 
-Suitable for applications that require frequent insertion and deletion
-Java Program on Linked List
+### Linked List Advantages
+* Dynamic in size
+* No wastage as capacity and size is always equal
+* Easy insertion and deletion as 1 link manipulation is required
+* Efficient memory allocation
+### Linked List Disadvantages
+* If head Node is lost, the linked list is lost
+* No random access is possible
+### Linked List Applications
+* Suitable where memory is limited 
+* Suitable for applications that require frequent insertion and deletion
 
+### Java Program on Linked List
+```
 import java.util.*;
 
 class LLNode{
@@ -202,9 +203,7 @@ class Demo{
 
  }
 }
-
-
-
+```
 
 
 Output:
