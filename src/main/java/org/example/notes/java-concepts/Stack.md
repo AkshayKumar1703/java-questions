@@ -32,7 +32,8 @@ Eg: a stack of plates, chairs, etc
 
 Eg - Java Program using Stack
 
-''' import java.util.*;
+```
+import java.util.*;
 
 class Stack
 {
@@ -86,7 +87,8 @@ class Stack
 	
 	
 }
-
+```
+```
 public class Demo
 {
 	public static void main(String args[])
@@ -128,7 +130,7 @@ public class Demo
 
 	}
 }
- '''
+ ```
 
 Output:
 
