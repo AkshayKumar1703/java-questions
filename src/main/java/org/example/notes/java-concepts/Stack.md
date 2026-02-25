@@ -235,6 +235,8 @@ enter the value
 
  do u want to cont...
 Java Data structure program of Stack - using LinkedList
+
+```
 import java.util.*;
 
 class LNode
@@ -363,7 +365,7 @@ System.out.println("n is empty : "+ s.isEmpty(head));
 
 	}
 }
-
+```
 
 
 
