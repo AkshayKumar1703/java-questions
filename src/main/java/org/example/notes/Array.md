@@ -1,19 +1,19 @@
-#Array
+# Array
 
-##What is an Array?
+### What is an Array?
 An array is the simplest data structure where a collection of similar data elements takes place and each data element can be accessed directly by only using its index number.
 
-Array Advantages
-Random access
-Easy sorting and iteration
-Replacement of multiple variables
-Array Disadvantages
-Size is fixed
-Difficult to insert and delete
-If capacity is more and occupancy less, most of the array gets wasted 
-Needs contiguous memory to get allocated
-Array Applications
-For storing information in a linear fashion
+### Array Advantages
+* Random access
+* Easy sorting and iteration
+* Replacement of multiple variables
+### Array Disadvantages
+* Size is fixed
+* Difficult to insert and delete
+* If capacity is more and occupancy less, most of the array gets wasted 
+* Needs contiguous memory to get allocated
+### Array Applications
+* For storing information in a linear fashion
 Suitable for applications that require frequent searching
 Java Program using Array
 1
@@ -56,4 +56,3 @@ Input:
  
 Output:
 23 13 56 78 10
-Data Structures and Algorithms in Java | linked list | java programming | Great Learning
