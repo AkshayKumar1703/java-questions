@@ -54,7 +54,9 @@ class HashSetDemo1{
 ```
 Output:
 string has unique characters
+
 Demonstration of HashMap - count the characters in a string
+```
 import java.util.*;
 
 class HashMapDemo
@@ -86,13 +88,15 @@ class HashMapDemo
 		check(s);
 	}
 }
-
+```
 Output
 count of e : 1
 count of h : 1
 count of l : 2
 count of o : 1
+
 Demonstration of HashTable - to find strings has unique characters
+```
 import java.util.*; 
 class hashTabledemo { 
 	public static void main(String[] arg) 
@@ -124,7 +128,7 @@ class hashTabledemo {
 
 	} 
 } 
-
+```
 Output
 values in clone: {3=Geeks, 2=forGeeks, 1=isBest}
 after clearing: {}
