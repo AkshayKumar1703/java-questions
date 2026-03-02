@@ -121,6 +121,7 @@ public class HeapDemo{
 }
 ```
 Output 
+
 7 
 enter the elements of array 
 50 100 10 1 3 20 5 
