@@ -120,27 +120,28 @@ public class HeapDemo{
 
 }
 ```
-Output
-7
-enter the elements of array
-50 100 10 1 3 20 5
-100
-50
-20
-1
-3
-10
-5
-maximum element is : 100
-50
-5
-20
-1
-3
-10
-maximum element is : 50
-800
-5
-20
-1
-3
+Output 
+
+7 
+enter the elements of array 
+50 100 10 1 3 20 5 
+100 
+50 
+20 
+1 
+3 
+10 
+5 
+maximum element is : 100 
+50 
+5 
+20 
+1 
+3 
+10 
+maximum element is : 50 
+800 
+5 
+20 
+1 
+3 
