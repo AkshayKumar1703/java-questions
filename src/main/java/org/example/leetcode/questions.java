@@ -5,7 +5,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class questions {
+public static class questions {
+
     //    26. Remove Duplicates from Sorted Array
     public int removeDuplicates(int[] nums) {
         if (nums.length == 0) {
@@ -23,7 +24,6 @@ public class questions {
 
     // Buy and sell stock
     // brute force
-    class Solution {
         public int maxProfit(int[] prices) {
             int max = 0;
             for (int b = 0; b < prices.length; b++) {
@@ -37,7 +37,6 @@ public class questions {
             }
             return max;
         }
-    }
 
     // Optimise Solution
     public int maxProfit2(int[] prices) {
@@ -376,6 +375,29 @@ public boolean isSameTree(TreeNode p, TreeNode q) {
         return false;
     }
     return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+}
+//code for converting the character into the
+public static void encrypt(String str) {
+    String result = new String();
+    for(int i = 0; i < str.length(); i++) {
+        int value = str.charAt(i) + 3;
+        result = result + (char)value;
+    }
+    System.out.println(result);
+    decrypt(result);
+}
+
+public static void decrypt(String str) {
+    String result = new String();
+    for(int i = 0; i < str.length(); i++) {
+        int value = str.charAt(i) - 3;
+        result = result + (char)value;
+    }
+    System.out.println(result);
+}
+public static void main(String[] args) {
+    String str = "zalando";
+    encrypt(str);
 }
 
         // 28. Find the Index of the First Occurrence in a String
