@@ -2,7 +2,7 @@ package org.example.datastructure;
 
 import java.util.Arrays;
 
-public class Solution {
+public class MergeSort {
     public static void merge(int[] nums1, int[] nums2) {
         int i = 0;
         int j = 0;

@@ -1,9 +1,7 @@
 package org.example.leetcode;
 
 import javax.swing.tree.TreeNode;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public static class questions {
 
@@ -37,8 +35,7 @@ public static class questions {
             }
             return max;
         }
-
-    // Optimise Solution
+    //Optimized solution of buy and sell stock
     public int maxProfit2(int[] prices) {
         int[] rightMax = new int[prices.length];
         rightMax[prices.length - 1] = prices[prices.length - 1];
@@ -399,6 +396,41 @@ public static void main(String[] args) {
     String str = "zalando";
     encrypt(str);
 }
+// convert smallcase to uppercase
+public static void convertToUpperCase1(String str) {
+    String result = new String();
+    for(int i = 0; i < str.length(); i++) {
+        int value = str.charAt(i) - ('a'-'A');
+        result = result + (char)value;
+    }
+    System.out.print(result);
+}
+
+public static void main(String[] args) {
+    String str = "cat";
+    convertToUpperCase1(str);
+}
+//longest common prefix
+public String longestCommonPrefix(String[] strs) {
+    if (strs == null || strs.length == 0) return "";
+
+    String first = strs[0];
+    String prefix = "";
+    for (int i = 0; i <= first.length(); i++) {
+
+        prefix = first.substring(0,i);
+
+        Boolean notMatch = false;
+        for (int j = 0; j < strs.length; j++) {
+            if (!strs[j].startsWith(prefix)) {
+                notMatch = true;
+                break;
+            }
+        }
+        if (notMatch) break;
+    }
+    return prefix.substring(0, prefix.length() - 1);
+}
 
         // 28. Find the Index of the First Occurrence in a String
 /*Given two strings needle and haystack, return the index of
@@ -414,5 +446,137 @@ public static void main(String[] args) {
     and removing all non-alphanumeric characters, it reads the same forward
     and backward. Alphanumeric characters include letters and numbers.*/
 
-// public static boolean isPalindrome(String s) {
+public static boolean isPalindrome(String s) {
+    String str = s.toLowerCase().replaceAll("[^A-Za-z0-9]", "");
+    int i = 0;
+    int j = str.length() - 1;
+    while (i < j) {
+        if (str.charAt(i) != str.charAt(j)) {
+            return false;
+        }
+        else {
+            i++;
+            j--;
+        }
+    }
+    return true;
+}
+// count words in a string
+public static Map<String, Integer> wordCount(String sentence) {
+    String[] words = sentence.split(" ");
+    Map<String, Integer> wordMap = new HashMap<>();
 
+    for (int i = 0; i < words.length; i++) {
+        String word = words[i];
+        if (wordMap.containsKey(word)) {
+            Integer oldValue = wordMap.get(word);
+            wordMap.put(word, oldValue + 1);
+        }
+        else {
+            wordMap.put(word, 1);
+        }
+    }
+
+    return wordMap;
+}
+
+
+public static void main(String[] args) {
+    String sentence = "Hello how are you doing Hello";
+    Map<String, Integer> wordMap = wordCount(sentence);
+    for(Map.Entry<String, Integer> entry : wordMap.entrySet()) {
+        System.out.print("Key is : " + entry.getKey());
+        System.out.print(" Value is : " + entry.getValue() + "\n");
+    }
+}
+//ClimbStairs
+class Solution {
+    Map<Integer, Integer> dp = new HashMap<>();
+
+    public int climbStairs(int n) {
+        if (n == 0 || n == 1) {
+            dp.put(n, 1);
+            return 1;
+        }
+        Integer prev1 = 0;
+        if (dp.containsKey(n - 1)) {
+            prev1 = dp.get(n - 1);
+        } else {
+            prev1 = climbStairs(n - 1);
+            dp.put(n - 1, prev1);
+        }
+        Integer prev2 = 0;
+        if (dp.containsKey(n - 2)) {
+            prev2 = dp.get(n - 2);
+        } else {
+            prev2 = climbStairs(n - 2);
+            dp.put(n - 2, prev2);
+        }
+        return prev1 + prev2;
+    }
+
+    //ClimbStairs optimised solution
+    public int climbStairs2(int n) {
+        if (n < 2) {
+            return 1;
+        }
+        int[] dp = new int[46];
+        dp[0] = 1;
+        dp[1] = 1;
+
+        for (int i = 2; i <= n; i++) {
+            dp[i] = dp[i - 1] + dp[i - 2];
+        }
+
+        return dp[n];
+    }
+}
+//205. Isomorphic Strings
+//Given two strings s and t, determine if they are isomorphic.
+//Two strings s and t are isomorphic if the characters in s can be replaced to get t.
+//All occurrences of a character must be replaced with another character while preserving the order of characters.
+// No two characters may map to the same character, but a character may map to itself.
+public static Boolean isIsomorphic(String s, String t) {
+    Map<Character,Integer> charMapS = new HashMap<>();
+    Map<Character,Integer> charMapT = new HashMap<>();
+    for (int i = 0; i < s.length(); i++) {
+        if (!charMapS.containsKey(s.charAt(i))) {
+            charMapS.put(s.charAt(i), i);
+        }
+        if (!charMapT.containsKey(t.charAt(i))) {
+            charMapT.put(t.charAt(i), i);
+        }
+        if (!charMapS.get(s.charAt(i)).equals(charMapT.get(t.charAt(i)))) {
+            return false;
+        }
+    }
+    System.out.println(charMapS);
+    System.out.println(charMapT);
+    return true;
+}
+public static void main(String[] args) {
+    String s = "egg";
+    String t = "add";
+    System.out.println(isIsomorphic(s, t));
+}
+/*Given an input string s, reverse the order of the words.
+A word is defined as a sequence of non-space characters. The words in s will be separated by at least one space.
+Return a string of the words in reverse order concatenated by a single space.
+Note that s may contain leading or trailing spaces or multiple spaces between two words.
+The returned string should only have a single space separating the words. Do not include any extra spaces.*/
+
+public static String reverseWords(String s) {
+    String[] words = s.split("\\s+");
+    String reverseString = "";
+    for (int i = words.length - 1; i >= 0; i--) {
+        if (i != 0) {
+            reverseString = reverseString + words[i] + " ";
+        }
+        else
+        {
+            reverseString = reverseString + words[i];
+        }
+    }
+    return reverseString.trim();
+}
+}
